@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#AA0000</color>
+    <color name="colorPrimaryDark">#660000</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="loginEnabled">#AA0000</color>
+    <color name="loginDisabled">#AAAAAA</color>
+</resources>

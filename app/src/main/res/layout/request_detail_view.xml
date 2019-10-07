@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/requestdetailitem_wrapper">
+
+    <TextView
+        android:id="@+id/requestdetailitem_placeholder1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:textAlignment="textStart"/>
+
+    <TextView
+        android:id="@+id/requestdetailitem_product_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:textAlignment="textStart"
+        android:text="Product pepe"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/requestdetailitem_count_expected_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:textAlignment="center"
+        android:text="0"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/requestdetailitem_count_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textIsSelectable="true"
+        android:layout_weight="0.15"
+        android:text="0"
+        android:textAlignment="textEnd" />
+
+    <TextView
+        android:id="@+id/requestdetailitem_placeholder2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:textAlignment="textStart"/>
+
+</LinearLayout>

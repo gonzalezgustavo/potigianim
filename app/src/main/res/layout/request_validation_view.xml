@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/requestvalidationitem_wrapper">
+
+    <TextView
+        android:id="@+id/requestvalidationitem_product_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:textAlignment="textStart"
+        android:text="Product pepe"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/requestvalidationitem_count_expected_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:textAlignment="center"
+        android:text="0"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/requestvalidationitem_count_actual_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:textAlignment="center"
+        android:text="0"
+        android:textStyle="bold"
+        android:singleLine="true"/>
+
+</LinearLayout>

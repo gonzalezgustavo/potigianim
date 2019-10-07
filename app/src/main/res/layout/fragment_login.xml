@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".fragments.LoginFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_logo_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/login_potigian_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_potigian_logo"
+        app:layout_constraintLeft_toLeftOf="@+id/login_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/login_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/login_logo_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_text_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <TextView
+        android:id="@+id/login_help_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Identifíquese para continuar"
+        app:layout_constraintLeft_toLeftOf="@+id/login_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/login_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/login_text_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_id_field_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <EditText
+        android:id="@+id/login_id_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="ID de Preparador"
+        android:textIsSelectable="true"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="@+id/login_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/login_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/login_id_field_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Acceder"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/loginDisabled"
+        android:enabled="false"
+        app:layout_constraintLeft_toLeftOf="@+id/login_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/login_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/login_button_guideline"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ValidateRequestFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_leftcenter_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_rightcenter_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_request_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0" />
+
+    <TextView
+        android:id="@+id/validaterequest_request_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Pedido X-XX-XXXX"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/validaterequest_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validaterequest_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validaterequest_request_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_help_text_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.075" />
+
+    <TextView
+        android:id="@+id/validaterequest_help_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"
+        android:text="Validación de artículos del pedido"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="@+id/validaterequest_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validaterequest_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validaterequest_help_text_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_request_price_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.125" />
+
+    <TextView
+        android:id="@+id/validaterequest_total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Valor actual del pedido: calculando..."
+        app:layout_constraintLeft_toLeftOf="@+id/validaterequest_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validaterequest_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validaterequest_request_price_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_request_top_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.225" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_request_bottom_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_request_button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/validaterequest_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validaterequest_right_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/validaterequest_request_top_list_guideline">
+
+        <TextView
+            android:id="@+id/validaterequest_product_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Producto" />
+
+        <TextView
+            android:id="@+id/validaterequest_expected_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Esp." />
+
+        <TextView
+            android:id="@+id/validaterequest_actual_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Act." />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/validaterequest_product_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/validaterequest_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validaterequest_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validaterequest_request_top_list_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/validaterequest_request_bottom_list_guideline" />
+
+    <TextView
+        android:id="@+id/validaterequest_product_list_empty_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Obteniendo productos..."
+        android:gravity="center"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/validaterequest_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validaterequest_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validaterequest_request_top_list_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/validaterequest_request_bottom_list_guideline"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_btn_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validaterequest_btn_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@+id/validaterequest_btn_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validaterequest_btn_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validaterequest_request_button_guideline">
+
+        <Button
+            android:id="@+id/validaterequest_back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginEnd="10dp"
+            android:text="Volver"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000" />
+
+        <Button
+            android:id="@+id/validaterequest_close_request_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginStart="10dp"
+            android:text="Cerrar pedido"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

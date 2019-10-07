@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BillFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_left2_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_leftcenter_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_rightcenter_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_right2_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_request_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0" />
+
+    <TextView
+        android:id="@+id/bill_request_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Pedido X-XX-XXXX"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/bill_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/bill_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/bill_request_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.075" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.775" />
+
+    <ScrollView
+        android:id="@+id/bill_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/bill_left2_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/bill_right2_guideline"
+        app:layout_constraintTop_toTopOf="@+id/bill_start_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/bill_end_guideline">
+
+        <LinearLayout
+            android:id="@+id/bill_scrollview_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02"/>
+
+            <LinearLayout
+                android:id="@+id/bill_scrollview_inner_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bill_client_name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:text="XXXXXXXX XXXXXXXXXXX"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bill_client_cuit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:text="CUIT XXXXXXXXXXX" />
+
+                <TextView
+                    android:id="@+id/bill_client_address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:text="XXXXXXXX 1234" />
+
+                <TextView
+                    android:id="@+id/bill_client_town_pc_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:text="XXXX XXXXXXXXX" />
+
+                <TextView
+                    android:id="@+id/bill_province_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:text="XXXX XXXXXXXXX" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bill_table_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:textStyle="bold"
+                        android:text="Articulo" />
+
+                    <TextView
+                        android:id="@+id/bill_table_units"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.1"
+                        android:textStyle="bold"
+                        android:text="U." />
+
+                    <TextView
+                        android:id="@+id/bill_table_unit_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.2"
+                        android:textStyle="bold"
+                        android:text="P.U." />
+
+                    <TextView
+                        android:id="@+id/bill_table_total_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.2"
+                        android:textStyle="bold"
+                        android:text="P.T." />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bill_product_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/bill_total_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="end"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.02"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_first_buttons_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@+id/bill_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/bill_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/bill_first_buttons_guideline">
+
+        <Button
+            android:id="@+id/bill_print_bill_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginEnd="10dp"
+            android:text="Imprimir factura"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000" />
+
+        <Button
+            android:id="@+id/bill_print_label_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginStart="10dp"
+            android:text="Imprimir etiqueta"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bill_second_buttons_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <Button
+        android:id="@+id/bill_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_marginStart="10dp"
+        android:text="Volver"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#AA0000"
+        app:layout_constraintLeft_toLeftOf="@+id/bill_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/bill_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/bill_second_buttons_guideline"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
