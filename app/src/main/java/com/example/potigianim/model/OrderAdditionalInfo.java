@@ -9,6 +9,7 @@ public class OrderAdditionalInfo {
     private String observations;
     private Date date;
     private String user;
+    private String terminal;
 
     public int getBillType() {
         return billType;
@@ -56,5 +57,13 @@ public class OrderAdditionalInfo {
 
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public String getTerminal() {
+        return terminal;
+    }
+
+    public void setTerminal(String terminal) {
+        this.terminal = terminal;
     }
 }

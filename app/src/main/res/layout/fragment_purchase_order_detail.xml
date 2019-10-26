@@ -11,14 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.025" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/orderdetail_right_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.975" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/orderdetail_text_guideline"
@@ -142,33 +142,24 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.6"
+            android:layout_weight="0.5"
             android:gravity="center"
             android:text="Producto" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"
+            android:layout_weight="0.2"
             android:gravity="center"
             android:text="Esp." />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"
+            android:layout_weight="0.2"
             android:gravity="center"
             android:text="Act." />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

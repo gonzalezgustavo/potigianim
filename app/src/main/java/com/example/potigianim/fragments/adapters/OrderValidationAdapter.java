@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.example.potigianim.MainActivity;
 import com.example.potigianim.R;
 import com.example.potigianim.model.PurchaseOrderDetail;
-import com.example.potigianim.model.RequestDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +48,7 @@ public class OrderValidationAdapter extends RecyclerView.Adapter<OrderValidation
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.request_validation_view, parent, false);
+        View listItem = layoutInflater.inflate(R.layout.order_validation_view, parent, false);
         return new ViewHolder(listItem);
     }
 

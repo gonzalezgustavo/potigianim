@@ -19,7 +19,7 @@
         android:id="@+id/requestvalidationitem_count_expected_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.15"
+        android:layout_weight="0.2"
         android:textAlignment="center"
         android:text="0"
         android:singleLine="true"/>
@@ -28,7 +28,7 @@
         android:id="@+id/requestvalidationitem_count_actual_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.15"
+        android:layout_weight="0.2"
         android:textAlignment="center"
         android:text="0"
         android:textStyle="bold"

@@ -11,14 +11,14 @@
         android:id="@+id/requestdetailitem_placeholder1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.05"
+        android:layout_weight="0.025"
         android:textAlignment="textStart"/>
 
     <TextView
         android:id="@+id/requestdetailitem_product_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.6"
+        android:layout_weight="0.5"
         android:textAlignment="textStart"
         android:text="Product pepe"
         android:singleLine="true"/>
@@ -27,7 +27,7 @@
         android:id="@+id/requestdetailitem_count_expected_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.15"
+        android:layout_weight="0.2"
         android:textAlignment="center"
         android:text="0"
         android:singleLine="true"/>
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:textIsSelectable="true"
-        android:layout_weight="0.15"
+        android:layout_weight="0.2"
         android:text="0"
         android:textAlignment="textEnd" />
 
@@ -46,7 +46,7 @@
         android:id="@+id/requestdetailitem_placeholder2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.05"
+        android:layout_weight="0.025"
         android:textAlignment="textStart"/>
 
 </LinearLayout>

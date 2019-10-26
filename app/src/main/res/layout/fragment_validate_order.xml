@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.025" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/validateorder_leftcenter_guideline"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.975" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/validateorder_text_guideline"
@@ -172,7 +172,7 @@
             android:id="@+id/validateorder_expected_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"
+            android:layout_weight="0.2"
             android:gravity="center"
             android:text="Esp." />
 
@@ -180,7 +180,7 @@
             android:id="@+id/validateorder_actual_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"
+            android:layout_weight="0.2"
             android:gravity="center"
             android:text="Act." />
 

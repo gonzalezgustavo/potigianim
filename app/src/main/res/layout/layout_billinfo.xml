@@ -58,6 +58,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:layout_weight="0.375"
+            android:maxLength="5"
             android:inputType="number"
             android:textIsSelectable="true"/>
 
@@ -72,6 +73,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:layout_weight="0.375"
+            android:maxLength="8"
             android:inputType="number"
             android:textIsSelectable="true"/>
 
