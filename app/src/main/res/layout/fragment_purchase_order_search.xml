@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PurchaseOrderSearchFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_text_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.025" />
+
+    <TextView
+        android:id="@+id/search_help_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Busque por proveedor, OC o ambas"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/search_text_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_provider_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <EditText
+        android:id="@+id/search_provider_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Número de Proveedor"
+        android:inputType="number"
+        android:textIsSelectable="true"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/search_provider_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_oc_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <EditText
+        android:id="@+id/search_oc_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Número de OC (sufijo)"
+        android:inputType="number"
+        android:textIsSelectable="true"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/search_oc_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <Button
+        android:id="@+id/search_apply_filter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Aplicar filtro"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#AA0000"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/search_button_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_list_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.425" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_list_bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.975" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/search_list_top_guideline">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:gravity="center"
+            android:text="Fecha" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="OC" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Prov." />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Comp." />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Items" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_oc_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/search_list_top_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/search_list_bottom_guideline"
+        />
+
+    <TextView
+        android:id="@+id/search_oc_list_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="No hay OCs que cumplan ese filtro"
+        android:gravity="center"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/search_list_top_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/search_list_bottom_guideline"/>
+
+    <TextView
+        android:id="@+id/search_oc_list_empty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="No hay OCs que cumplan ese filtro"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/search_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/search_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/search_list_top_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/search_list_bottom_guideline"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

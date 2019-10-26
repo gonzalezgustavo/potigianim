@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PurchaseOrderDetailFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_text_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.025" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/orderdetail_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/orderdetail_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/orderdetail_text_guideline">
+
+        <TextView
+            android:id="@+id/orderdetail_bill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Factura: xxxxxxx"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/orderdetail_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Usuario: xxxxxxx"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_init1_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.075" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/orderdetail_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/orderdetail_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/orderdetail_init1_guideline">
+
+        <TextView
+            android:id="@+id/orderdetail_oc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="OC: x-xx-xxxx"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/orderdetail_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Fecha: XX/XX/XXXX"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_init2_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.125" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/orderdetail_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/orderdetail_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/orderdetail_init2_guideline">
+
+        <TextView
+            android:id="@+id/orderdetail_buyer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Comprador: XXX"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/orderdetail_provider_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Proveedor: XXX"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_top_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.225" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_btm_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/orderdetail_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/orderdetail_right_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/orderdetail_top_list_guideline">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:text="Producto" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Esp." />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Act." />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderdetail_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/orderdetail_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/orderdetail_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/orderdetail_top_list_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/orderdetail_btm_list_guideline"
+        />
+
+    <TextView
+        android:id="@+id/orderdetail_list_empty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:background="@drawable/request_headers_border"
+        android:text="Cargando productos.."
+        app:layout_constraintLeft_toLeftOf="@+id/orderdetail_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/orderdetail_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/orderdetail_top_list_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/orderdetail_btm_list_guideline"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/orderdetail_buttons_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.975" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/orderdetail_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/orderdetail_right_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/orderdetail_buttons_guideline">
+
+        <Button
+            android:id="@+id/orderdetail_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Volver"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"/>
+
+        <Button
+            android:id="@+id/orderdetail_finalize_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Finalizar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

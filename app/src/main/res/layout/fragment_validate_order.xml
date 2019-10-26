@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ValidateOrderFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_leftcenter_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_rightcenter_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_text_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.025" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/validateorder_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validateorder_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validateorder_text_guideline">
+
+        <TextView
+            android:id="@+id/validateorder_bill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Factura: xxxxxxx"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/validateorder_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Usuario: xxxxxxx"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_init1_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.075" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/validateorder_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validateorder_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validateorder_init1_guideline">
+
+        <TextView
+            android:id="@+id/validateorder_oc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="OC: x-xx-xxxx"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/validateorder_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Fecha: XX/XX/XXXX"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_init2_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.125" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/validateorder_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validateorder_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validateorder_init2_guideline">
+
+        <TextView
+            android:id="@+id/validateorder_buyer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Comprador: XXX"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/validateorder_provider_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Proveedor: XXX"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_request_top_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.225" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_request_bottom_list_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_request_button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/validateorder_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validateorder_right_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/validateorder_request_top_list_guideline">
+
+        <TextView
+            android:id="@+id/validateorder_product_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Producto" />
+
+        <TextView
+            android:id="@+id/validateorder_expected_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Esp." />
+
+        <TextView
+            android:id="@+id/validateorder_actual_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:text="Act." />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/validateorder_product_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/validateorder_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validateorder_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validateorder_request_top_list_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/validateorder_request_bottom_list_guideline" />
+
+    <TextView
+        android:id="@+id/validateorder_product_list_empty_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Obteniendo productos..."
+        android:gravity="center"
+        android:background="@drawable/request_headers_border"
+        app:layout_constraintLeft_toLeftOf="@+id/validateorder_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validateorder_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validateorder_request_top_list_guideline"
+        app:layout_constraintBottom_toBottomOf="@+id/validateorder_request_bottom_list_guideline"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_btn_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/validateorder_btn_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@+id/validateorder_btn_left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/validateorder_btn_right_guideline"
+        app:layout_constraintTop_toTopOf="@+id/validateorder_request_button_guideline">
+
+        <Button
+            android:id="@+id/validateorder_back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginEnd="10dp"
+            android:text="Volver"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000" />
+
+        <Button
+            android:id="@+id/validateorder_close_request_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginStart="10dp"
+            android:text="Sincronizar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#AA0000" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
