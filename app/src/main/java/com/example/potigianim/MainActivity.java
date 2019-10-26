@@ -23,6 +23,7 @@ import com.example.potigianim.fragments.LoginFragment;
 import com.example.potigianim.utils.BarcodeUtils;
 import com.example.potigianim.utils.Constants;
 import com.example.potigianim.utils.StoreService;
+import com.example.potigianim.utils.StringUtils;
 import com.google.common.reflect.TypeToken;
 import com.honeywell.aidc.AidcManager;
 import com.honeywell.aidc.BarcodeFailureEvent;
@@ -84,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
             break;
             case R.id.menu_api:
                 displayApiAlert();
+            break;
+            case R.id.terminal:
+                displayTerminalAlert();
             break;
             default:
                 return super.onOptionsItemSelected(item);
@@ -209,6 +213,17 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         return url;
     }
 
+    public String getTerminal() {
+        String terminal = get(Constants.TERMINAL_KEY, String.class, new TypeToken<String>(){}.getType());
+
+        if (terminal == null) {
+            terminal = StringUtils.generateRandomString(10);
+            set(Constants.TERMINAL_KEY, terminal);
+        }
+
+        return terminal;
+    }
+
     public void setApiUrl(String newValue) {
         set(Constants.API_KEY, newValue);
         Constants.setApiUrl(newValue);
@@ -232,6 +247,15 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
         newView.setText(url);
         urlView.setText(url);
         builder.show();
+    }
+
+    private void displayTerminalAlert() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.ic_info_icon)
+                .setTitle("Terminal")
+                .setMessage("Su terminal es: " + getTerminal().trim())
+                .setPositiveButton("OK", (dialog, which) -> {})
+                .show();
     }
 
     private Class<? extends BaseFragment> castFragmentNameToClass(String fragmentName) {

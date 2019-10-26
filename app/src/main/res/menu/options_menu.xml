@@ -3,6 +3,9 @@
     <item android:id="@+id/menu_api"
         android:title="Configurar API" />
 
+    <item android:id="@+id/terminal"
+        android:title="Ver terminal" />
+
     <item android:id="@+id/menu_logout"
     android:title="Cerrar sesión" />
 </menu>

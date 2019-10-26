@@ -98,7 +98,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"/>
+            android:layout_weight="0.3"/>
 
         <EditText
             android:id="@+id/billinfo_date_text"
@@ -106,12 +106,12 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:singleLine="true"
-            android:layout_weight="0.7"/>
+            android:layout_weight="0.4"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"/>
+            android:layout_weight="0.3"/>
 
     </LinearLayout>
 
@@ -142,6 +142,39 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.15"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sucursal empresa"
+        android:layout_marginTop="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"/>
+
+        <EditText
+            android:id="@+id/billinfo_branch_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textIsSelectable="true"
+            android:layout_weight="0.3"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"/>
 
     </LinearLayout>
 </LinearLayout>

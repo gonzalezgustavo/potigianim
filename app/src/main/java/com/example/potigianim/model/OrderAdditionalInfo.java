@@ -10,6 +10,7 @@ public class OrderAdditionalInfo {
     private Date date;
     private String user;
     private String terminal;
+    private double branch;
 
     public int getBillType() {
         return billType;
@@ -65,5 +66,13 @@ public class OrderAdditionalInfo {
 
     public void setTerminal(String terminal) {
         this.terminal = terminal;
+    }
+
+    public double getBranch() {
+        return branch;
+    }
+
+    public void setBranch(double branch) {
+        this.branch = branch;
     }
 }

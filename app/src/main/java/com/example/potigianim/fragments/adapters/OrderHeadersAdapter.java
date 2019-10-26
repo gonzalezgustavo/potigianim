@@ -89,6 +89,7 @@ public class OrderHeadersAdapter extends RecyclerView.Adapter<OrderHeadersAdapte
         final EditText suffixEdit = dialogView.findViewById(R.id.billinfo_suffix_edit);
         final EditText dateEdit = dialogView.findViewById(R.id.billinfo_date_text);
         final EditText observationEdit = dialogView.findViewById(R.id.billinfo_observations_text);
+        final EditText branchEdit = dialogView.findViewById(R.id.billinfo_branch_text);
 
         List<String> options = new ArrayList<>();
         options.add("Factura"); //1
@@ -125,8 +126,9 @@ public class OrderHeadersAdapter extends RecyclerView.Adapter<OrderHeadersAdapte
             String dateAsText = dateEdit.getText().toString();
             String prefixAsText = prefixEdit.getText().toString();
             String suffixAsText = suffixEdit.getText().toString();
+            String branchAsText = branchEdit.getText().toString();
 
-            if (dateAsText.isEmpty() || prefixAsText.isEmpty() || suffixAsText.isEmpty()) {
+            if (dateAsText.isEmpty() || prefixAsText.isEmpty() || suffixAsText.isEmpty() || branchAsText.isEmpty()) {
                 emptyFieldsDialog.show();
                 close = false;
             } else {
@@ -138,6 +140,7 @@ public class OrderHeadersAdapter extends RecyclerView.Adapter<OrderHeadersAdapte
                     double prefix = Double.parseDouble(prefixEdit.getText().toString());
                     double suffix = Double.parseDouble(suffixEdit.getText().toString());
                     String observations = observationEdit.getText().toString();
+                    double branch = Double.parseDouble(branchEdit.getText().toString());
                     Date date = null;
                     try {
                         date = new SimpleDateFormat("dd/MM/yyyy").parse(dateAsText);
@@ -150,6 +153,8 @@ public class OrderHeadersAdapter extends RecyclerView.Adapter<OrderHeadersAdapte
                     info.setObservations(observations);
                     info.setDate(date);
                     info.setUser(this.mainActivity.getCurrentFragment().getUser().getCode());
+                    info.setTerminal(this.mainActivity.getTerminal());
+                    info.setBranch(branch);
 
                     mainActivity.set(Constants.CURRENT_ORDER_ADDITIONAL_KEY, info);
                     mainActivity.set(Constants.CURRENT_ORDER_KEY, order);

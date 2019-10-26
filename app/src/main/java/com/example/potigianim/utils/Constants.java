@@ -13,6 +13,7 @@ public class Constants {
     public static final String CURRENT_ORDER_KEY = "_currentOrder";
     public static final String CURRENT_ORDER_ADDITIONAL_KEY = "_currentOrderAdditional";
     public static final String COUNT_ORDER_KEY = "_countRequest:{prefixOc}-{oc}-{suffixOc}";
+    public static final String TERMINAL_KEY = "_terminal";
     public static final String API_KEY = "_api";
 
     public static final String DATE_SUFFIX = "_date";

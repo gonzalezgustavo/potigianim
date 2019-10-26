@@ -125,11 +125,9 @@ public class ValidateOrderFragment extends BaseFragment {
 
         response.getDetailInfo().stream()
                 .filter(i -> i.getDetailReturnCode() != 0)
-                .forEach(i -> {
-                    messageInfo.append("  Art: ").append(i.getArticleCode().intValue()).append(" - Código rta: ")
-                            .append(i.getDetailReturnCode()).append("\n")
-                            .append("  Mensaje: ").append(i.getDetailMessage()).append("\n\n");
-                });
+                .forEach(i -> messageInfo.append("  Art: ").append(i.getArticleCode().intValue())
+                        .append(" - Código rta: ").append(i.getDetailReturnCode()).append("\n")
+                        .append("  Mensaje: ").append(i.getDetailMessage()).append("\n\n"));
 
         if (!displayError) {
             PurchaseOrderHeader order = getOrderHeader();
